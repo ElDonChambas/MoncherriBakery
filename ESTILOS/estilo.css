@@ -242,46 +242,105 @@ body h1{
 }
 
 @media (max-width: 900px) {
-    .gridProductos{
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
-    }    
 
-    .info{
-        width: 75%;
-        margin: 50px auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 40px
-    }
+  /* Navbar */
+  .navlinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 
-    .footerInfoSection {
-        width: 90%;
-        display: flex;
-        gap: 50px;
-    }
+  /* Banner */
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
 
-    .footerInfo2 h2{
-        font-size: 20px;
-    }
+  /* Texto central */
+  .info {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
 
-    .footerInfo2 li {
-        font-size: 15px;
-        margin-left: 15px;
-    }
+  .info-left, .info-right {
+    flex: none;
+    width: 100%;
+  }
 
-    .footerInfo3 h2{
-        font-size: 20px;
-    }
+  .info-right p {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
 
-    .footerInfo3 li {
-        font-size: 15px;
-        margin-left: 15px;
-    }
+  /* Grid de productos */
+  .gridProductos {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 30px auto;
+    gap: 15px;
+  }
 
-    .footerInfo1 img {
-        width: 20%;
-        min-width: 140px;    
-    }
+  .producto {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .producto img {
+    width: 100%;
+    height: auto;
+  }
+
+  .productoNombre {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footerInfoSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    gap: 20px;
+  }
+
+  .footerInfo1 img {
+    width: 120px;
+    height: auto;
+  }
+
+  .footerInfo2, .footerInfo3 {
+    width: 100%;
+  }
+
+  .footerInfo2 h2,
+  .footerInfo3 h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .footerInfo2 li,
+  .footerInfo3 li {
+    font-size: 15px;
+  }
+}
+
+
+/* --- Ajuste extra para pantallas muy pequeñas --- */
+@media (max-width: 600px) {
+  .gridProductos {
+    grid-template-columns: (2, 1fr);
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .ordenText a {
+    font-size: 18px;
+  }
 }
