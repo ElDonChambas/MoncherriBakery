@@ -234,6 +234,13 @@ body h1{
     transition: 0.3s;
 }
 
+.gridProductos,
+.footerInfoSection,
+.info {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
 @media (max-width: 900px) {
     .gridProductos{
         grid-template-columns: repeat(2, 1fr);
