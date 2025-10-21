@@ -22,6 +22,7 @@ html body {
 .logo {
     height: auto;
     width: 10%;
+    min-width: 120px;
 }
 
 .navlinks{
@@ -48,7 +49,14 @@ html body {
     padding: 0;
 }
 
-.banner img {
+.banner-top img {
+    width: 100%;
+    height: auto;
+    border-top: 0px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.banner-bottom img {
     width: 100%;
     height: auto;
     border-top: 2px solid #000000;
@@ -78,7 +86,7 @@ body h1{
 
 .info{
     width: 65%;
-    margin: 50px auto;
+    margin: 20px auto 50px auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -202,14 +210,15 @@ body h1{
 }
 
 .footerInfo2 li{
-    color: #CF1F23;
+    color: #AA2B2C;
     font-size: 20px;
-    margin-left: 15px;
+    margin-left: 0;
     transition: 0.3s;
+    list-style: none;
 }
 
 .footerInfo2 li:hover{
-    color: #974f61;
+    color: #d67b92;
     transition: 0.3s;
 }
 
@@ -225,12 +234,14 @@ body h1{
 .footerInfo3 li{
     color: #AA2B2C;
     font-size: 20px;
-    margin-left: 15px;
+    margin-left: 0;
     transition: 0.3s;
+    list-style: none;
+
 }
 
 .footerInfo3 li:hover{
-    color: #974f61;
+    color: #d67b92;
     transition: 0.3s;
 }
 
@@ -238,16 +249,76 @@ body h1{
 .footerInfoSection,
 .info {
   width: min(90%, 1200px);
-  margin: 0 auto;
+  
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #000000;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #e86b8a;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-toogle {
+  display: none;
 }
 
 @media (max-width: 900px) {
 
   /* Navbar */
   .navlinks {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: #ffeaf1;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
+    transition: left 0.4s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+  }
+
+  .navbar{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  .logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu-icon{
+    display: block;
+  }
+
+  .navlinks li a {
+    font-size: 20px;
+    color: #e86b8a;
+  }
+
+  .navlinks li a:hover {
+    color: #974f61;
+  }
+
+
+  /* Cuando se activa el checkbox */
+  .menu-toogle:checked + .menu-icon + .navlinks {
+    left: 0;
   }
 
   /* Banner */
@@ -259,6 +330,7 @@ body h1{
   /* Texto central */
   .info {
     width: 90%;
+    margin: 0 auto 20px auto;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -300,26 +372,30 @@ body h1{
 
   /* Footer */
   .footerInfoSection {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     text-align: center;
-    width: 90%;
     gap: 20px;
   }
 
   .footerInfo1 img {
-    width: 120px;
+    width: 20%;
     height: auto;
+    max-width: 90px;
+  }
+
+  .footerInfo1 {
+    width: 10%;
   }
 
   .footerInfo2, .footerInfo3 {
-    width: 100%;
+    width: 40%;
   }
 
   .footerInfo2 h2,
   .footerInfo3 h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: -15px;
   }
 
   .footerInfo2 li,
@@ -329,7 +405,6 @@ body h1{
 }
 
 
-/* --- Ajuste extra para pantallas muy pequeñas --- */
 @media (max-width: 600px) {
   .gridProductos {
     grid-template-columns: (2, 1fr);
@@ -342,5 +417,27 @@ body h1{
 
   .ordenText a {
     font-size: 18px;
+  }
+
+  .footerInfoSection {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footerInfo2, .footerInfo3 {
+    width: 40%;
+  }
+
+  .footerInfo1{
+    width: 20%;
+  }
+
+  .footerInfo1 img {
+    max-width: 100px;
+    width: 30%;
+    height: auto;
   }
 }
