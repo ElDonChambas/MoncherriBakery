@@ -72,7 +72,7 @@ html body {
     color: #e86b8a;
     transition: 0.3s;
     font-size: 20px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Emilys Candy", serif;
 }
 
 .ordenText a:hover {
@@ -81,7 +81,7 @@ html body {
 
 body h1{
     text-align: center;
-    font-family: 'Pacifico', cursive;
+    font-family: "Henny Penny", system-ui;;
 }
 
 .info{
@@ -99,6 +99,10 @@ body h1{
     font-size: 17px;
 }
 
+.info-left p {
+  font-family: "Emilys Candy", serif;
+}
+
 .info-right{
     flex: 1;
     color: #333;
@@ -111,6 +115,7 @@ body h1{
     gap: 10px;
     margin-bottom: 15px;
     font-size: 17px;
+    font-family: "Emilys Candy", serif;
 }
 
 .info-right img{
@@ -144,17 +149,17 @@ body h1{
     color: #e86b8a;
     font-weight: bold;
     font-size: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Henny Penny", system-ui;
 }
 
 .precio {
     font-size: 18px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 }
 
 .precio_promocion{
     font-size: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 }
 
 .producto img {
@@ -165,19 +170,35 @@ body h1{
 .producto button{
     background-color: #e86b8a;
     color: #FFF;
-    font-weight: bold;
     font-size: 15px;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    
+    font-family: "Emilys Candy", serif;;
     transition: 0.3s;
+    margin-bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 120px;
+    height: 40px;
+    vertical-align: middle;
 }
 
+.producto a{
+  display: inline-block;
+}
 .producto button:hover{
     background-color: #974f61;
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+#imgButton {
+  width: 18px;
+  height: auto;
+  border-radius: 0;
 }
 
 .footerInfoSection {
@@ -187,6 +208,10 @@ body h1{
     margin: -4px auto;
     padding-top: 30px;
     padding-bottom: -20px;
+}
+
+.footerInfoSection h2 {
+  font-family: "Henny Penny", system-ui;
 }
 
 .footerInfo1 {
@@ -214,7 +239,7 @@ body h1{
     font-size: 20px;
     margin-left: 0;
     transition: 0.3s;
-    list-style: none;
+    font-family: "Emilys Candy", serif;
 }
 
 .footerInfo2 li:hover{
@@ -236,8 +261,7 @@ body h1{
     font-size: 20px;
     margin-left: 0;
     transition: 0.3s;
-    list-style: none;
-
+    font-family: "Emilys Candy", serif;
 }
 
 .footerInfo3 li:hover{
@@ -249,7 +273,6 @@ body h1{
 .footerInfoSection,
 .info {
   width: min(90%, 1200px);
-  
 }
 
 header {
@@ -439,5 +462,16 @@ header {
     max-width: 100px;
     width: 30%;
     height: auto;
+  }
+
+  .footerInfo2 h2,
+  .footerInfo3 h2 {
+    font-size: 13px;
+    margin-bottom: -15px;
+  }
+
+  .footerInfo2 li,
+  .footerInfo3 li {
+    font-size: 10px;
   }
 }
