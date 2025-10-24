@@ -333,6 +333,7 @@ header {
   .navlinks li a {
     font-size: 20px;
     color: #e86b8a;
+    font-family: "Emilys Candy", serif;
   }
 
   .navlinks li a:hover {
@@ -425,6 +426,12 @@ header {
   .footerInfo2 li,
   .footerInfo3 li {
     font-size: 15px;
+  }
+
+  .MenuHeader{
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Henny Penny", system-ui;
   }
 }
 
