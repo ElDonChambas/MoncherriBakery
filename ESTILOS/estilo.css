@@ -138,12 +138,12 @@ body h1{
 }
 
 .producto{
-    border: 1px solid #000000;
-    border-radius: 8px;
-    padding: 8px 8px 15px 8px;
-    text-align: center;
-    background-color: #FFF;
-    transition: 0.3s;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 8px 8px 15px 8px;
+  text-align: center;
+  background-color: #FFF;
+  transition: 0.3s;
 }
 
 .producto:hover{
@@ -196,10 +196,37 @@ body h1{
 .producto a{
   display: inline-block;
 }
+
 .producto button:hover{
     background-color: #974f61;
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+#cherryDivProducto{
+  vertical-align: middle;
+  padding: 25px 0 0 0;
+  text-align: center;
+  background-color: #FEE6F6;
+  border: 0px solid #000;
+}
+
+#cherryImgProducto{
+  width: 100%;
+  vertical-align: middle;
+}
+
+#oliverDivProducto{
+  vertical-align: middle;
+  padding: 25px 0 0 0;
+  text-align: center;
+  background-color: #E0FAB1;
+  border: 0px solid #000;
+}
+
+#oliverImgProducto{
+  width: 100%;
+  vertical-align: middle;
 }
 
 #imgButton {
@@ -293,6 +320,70 @@ header {
 
 .menu-toogle {
   display: none;
+}
+
+.sliderProductos {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  scroll-behavior: smooth;
+  padding: 40px 20px;
+  scroll-padding-left: 20px;
+}
+
+.producto {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 250px; /* ajusta según tu diseño */
+}
+
+.sliderWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.sliderBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #e86b8a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sliderBtn.left1 { left: 10px; }
+.sliderBtn.right1 { right: 10px; }
+
+.sliderBtn.left2 { left: 10px; }
+.sliderBtn.right2 { right: 10px; }
+
+.sliderProductos, 
+.sliderProductos * {
+  user-select: none;          /* Bloquea selección de texto */
+  -webkit-user-drag: none;    /* Evita arrastrar imágenes */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.sliderProductos {
+  cursor: grab;
+  cursor: -webkit-grab;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.sliderProductos::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Edge nuevo */
+}
+
+.sliderProductos.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
 
 @media (max-width: 900px) {
