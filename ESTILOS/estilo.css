@@ -158,6 +158,13 @@ body h1{
     font-family: "Henny Penny", system-ui;
 }
 
+.productoNombreSalado {
+    color: #9fc753;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Henny Penny", system-ui;
+}
+
 .precio {
     font-size: 18px;
     font-weight: bold;
@@ -203,11 +210,37 @@ body h1{
     transition: 0.3s;
 }
 
+.producto #buttonSalado{
+    background-color: #9fc753;
+    color: #FFF;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Emilys Candy", serif;;
+    transition: 0.3s;
+    margin-bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 120px;
+    width: 30%;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.producto #buttonSalado:hover{
+    background-color: #708d3c;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 #cherryDivProducto{
   vertical-align: middle;
   padding: 25px 0 0 0;
   text-align: center;
-  background-color: #FEE6F6;
+  background-color: #FEE6FC;
   border: 0px solid #000;
 }
 
@@ -236,60 +269,34 @@ body h1{
 }
 
 .footerInfoSection {
-    width: 70%;
+    width: 100%;
+    max-width: 1000px;
     display: flex;
-    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
     margin: -4px auto;
-    padding-top: 30px;
-    padding-bottom: -20px;
+    padding: 30px 20px 10px 20px;
+    box-sizing: border-box;
 }
 
 .footerInfoSection h2 {
   font-family: "Henny Penny", system-ui;
 }
 
-.footerInfo1 {
+.footerInfo1, .footerInfo2, .footerInfo3{
     flex: 1;
-    width: 30%;
+    width: 40%;
 }
 
-.footerInfo1 img {
-    width: 30%;
-    min-width: 160px;
-    translate: 0 -30px 0;
-}
-
-.footerInfo2{
-    flex: 1;
-    width: 30%;
-}
-
-.footerInfo2 a{
-    text-decoration: none;
-}
-
-.footerInfo2 li{
-    color: #AA2B2C;
-    font-size: 20px;
-    margin-left: 0;
-    transition: 0.3s;
-    font-family: "Emilys Candy", serif;
-}
-
-.footerInfo2 li:hover{
-    color: #d67b92;
-    transition: 0.3s;
-}
-
-.footerInfo3{
-    flex: 1;
-    width: 30%;
-}
-
+.footerInfo1 a,
+.footerInfo2 a,
 .footerInfo3 a{
     text-decoration: none;
 }
 
+.footerInfo1 li,
+.footerInfo2 li,
 .footerInfo3 li{
     color: #AA2B2C;
     font-size: 20px;
@@ -298,9 +305,22 @@ body h1{
     font-family: "Emilys Candy", serif;
 }
 
+.footerInfo1 li:hover,
+.footerInfo2 li:hover,
 .footerInfo3 li:hover{
     color: #d67b92;
     transition: 0.3s;
+}
+
+.footerInfo3 li{
+    list-style-type: none;
+    display: flex;
+}
+
+.footerInfo3 svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 }
 
 header {
@@ -347,7 +367,7 @@ header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #e86b8a;
+
   color: white;
   border: none;
   padding: 8px 12px;
@@ -356,16 +376,16 @@ header {
   z-index: 10;
 }
 
-.sliderBtn.left1 { left: 10px; }
-.sliderBtn.right1 { right: 10px; }
+.sliderBtn.left1 { left: 10px; background-color: #e86b8a}
+.sliderBtn.right1 { right: 10px; background-color: #e86b8a;}
 
-.sliderBtn.left2 { left: 10px; }
-.sliderBtn.right2 { right: 10px; }
+.sliderBtn.left2 { left: 10px; background-color: #9fc753;}
+.sliderBtn.right2 { right: 10px; background-color: #9fc753;}
 
 .sliderProductos, 
 .sliderProductos * {
-  user-select: none;          /* Bloquea selección de texto */
-  -webkit-user-drag: none;    /* Evita arrastrar imágenes */
+  user-select: none;
+  -webkit-user-drag: none;
   -moz-user-select: none;
   -ms-user-select: none;
 }
@@ -373,12 +393,12 @@ header {
 .sliderProductos {
   cursor: grab;
   cursor: -webkit-grab;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
 .sliderProductos::-webkit-scrollbar {
-  display: none; /* Chrome, Safari y Edge nuevo */
+  display: none;
 }
 
 .sliderProductos.active {
@@ -431,19 +451,15 @@ header {
     color: #974f61;
   }
 
-
-  /* Cuando se activa el checkbox */
   .menu-toogle:checked + .menu-icon + .navlinks {
     left: 0;
   }
 
-  /* Banner */
   .banner img {
     width: 100%;
     height: auto;
   }
 
-  /* Texto central */
   .info {
     width: 90%;
     margin: 0 auto 20px auto;
@@ -464,14 +480,6 @@ header {
     text-align: center;
   }
 
-  /* Grid de productos */
-  .gridProductos {
-    grid-template-columns: repeat(2, 1fr);
-    width: 90%;
-    margin: 30px auto;
-    gap: 15px;
-  }
-
   .producto {
     padding: 10px;
     font-size: 14px;
@@ -486,38 +494,37 @@ header {
     font-size: 16px;
   }
 
-  /* Footer */
   .footerInfoSection {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
     text-align: center;
-    gap: 20px;
+    gap: 30px;
   }
 
-  .footerInfo1 img {
-    width: 20%;
-    height: auto;
-    max-width: 90px;
-  }
-
-  .footerInfo1 {
-    width: 10%;
-  }
-
-  .footerInfo2, .footerInfo3 {
-    width: 40%;
+  .footerInfo2, .footerInfo1, .footerInfo3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footerInfo2 h2,
+  .footerInfo1 h2,
   .footerInfo3 h2 {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: -15px;
   }
 
   .footerInfo2 li,
+  .footerInfo1 li,
   .footerInfo3 li {
-    font-size: 15px;
+    font-size: 18px;
   }
+
+  .footerInfo3 svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
 
   .MenuHeader{
     text-align: center;
@@ -528,11 +535,6 @@ header {
 
 
 @media (max-width: 600px) {
-  .gridProductos {
-    grid-template-columns: (2, 1fr);
-    width: 85%;
-  }
-
   h1 {
     font-size: 22px;
   }
@@ -542,36 +544,31 @@ header {
   }
 
   .footerInfoSection {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    display: flex;
     text-align: center;
+    gap: 30px;
+  }
+
+  .footerInfo1, .footerInfo2, .footerInfo3 {
     width: 100%;
-    padding-bottom: 15px;
-  }
-
-  .footerInfo2, .footerInfo3 {
-    width: 40%;
-  }
-
-  .footerInfo1{
-    width: 20%;
-  }
-
-  .footerInfo1 img {
-    width: 100%;
-    min-width: 140px;
-    height: auto;
   }
 
   .footerInfo2 h2,
+  .footerInfo1 h2,
   .footerInfo3 h2 {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: -30px;
   }
 
   .footerInfo2 li,
+  .footerInfo1 li,
   .footerInfo3 li {
-    font-size: 13px;
+    font-size: 15px;
+  }
+
+  .footerInfo3 svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
   }
 }
