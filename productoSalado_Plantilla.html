@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ESTILOS/estiloSalados.css">
+    <link rel="stylesheet" href="ESTILOS/productoSalado.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
 
     <link rel="shortcut icon" href="IMAGENES/logo_cortado.jpg" type="image/x-icon">
 
-    <title>Menu Salado - Moncherri Bakery</title>
+    <title>Moncherri Bakery</title>
 </head>
 <body>
 
@@ -35,167 +35,64 @@
         </nav>
     </header>
 
-    <div class="banner-top">
-        <img src="IMAGENES/banerSalado.jpg" alt="Banner">
-    </div>
-
-    <section style="background-color: #E0FAB1; padding: 10px 0 10px 0; border-top: 2px solid #000" class="menuSalado">
-        <h2 class="MenuHeader">Menu Salado</h2>
-        <section class="">
-
-            <div class="sliderWrapper">
-                <button class="sliderBtn left2">&#10094;</button>
-                <div class="sliderProductos" id="slider2">
-                    
-                    <div class="producto" id="oliverDivProducto">
-                        <img src="IMAGENES/oliver_gif2.gif" alt="Oliver_gif" id="oliverImgProducto">
-                    </div>
-
-                    <div class="producto">
-                        <a href="productoSalado_Plantilla.html" style="text-decoration: none">
-                            <img src="IMAGENES/platoSalado1 cuadrado.jpg" alt="Producto1">
-                            <p class="productoNombreSalado">Producto1</p><br>
-                            <p class="precio_promocion" style="visibility: visible;"> 3</p>
-                            <p class="precio" style="text-decoration: line-through;"> 5</p><br>
-                        </a>
-                            <a href="">
-                                <button id="buttonSalado">
-                                    <img src="IMAGENES/whatsapp.png" alt="whatsapp logo" id="imgButton">
-                                    Ordenar
-                                </button>
-                            </a> 
-                            <a href="">
-                                <button id="buttonSalado">
-                                    <img src="IMAGENES/email.png" alt="Email" id="imgButton">
-                                    Cotizar
-                                </button>
-                            </a>
-                    </div>
-
-                    <div class="producto">
-                        <img src="IMAGENES/platoSalado2 cuadrado.jpg" alt="Producto1">
-                        <p class="productoNombreSalado">Producto2</p><br>
-                        <p class="precio_promocion" style="visibility: hidden;"> 5</p>
-                        <p class="precio" style="text-decoration: ;"> 7</p><br>
-                        <a href="">
-                            <button id="buttonSalado">
-                                <img src="IMAGENES/whatsapp.png" alt="whatsapp logo" id="imgButton">
-                                Ordenar
-                            </button>
-                        </a> 
-                        <a href="">
-                            <button id="buttonSalado">
-                                <img src="IMAGENES/email.png" alt="Email" id="imgButton">
-                                Cotizar
-                            </button>
-                        </a>
-                    </div>
-
-                    <div class="producto">
-                        <img src="IMAGENES/platoSalado3 cuadrado.jpg" alt="Producto1">
-                        <p class="productoNombreSalado">Producto3</p><br>
-                        <p class="precio_promocion" style="visibility: visible;"> 6</p>
-                        <p class="precio" style="text-decoration: line-through;"> 8</p><br>
-                        <a href="">
-                            <button id="buttonSalado">
-                                <img src="IMAGENES/whatsapp.png" alt="whatsapp logo" id="imgButton">
-                                Ordenar
-                            </button>
-                        </a> 
-                        <a href="">
-                            <button id="buttonSalado">
-                                <img src="IMAGENES/email.png" alt="Email" id="imgButton">
-                                Cotizar
-                            </button>
-                        </a>
-                    </div>
-
-                    <div class="producto">
-                        <img src="IMAGENES/platoSalado1 cuadrado.jpg" alt="Producto1">
-                        <p class="productoNombreSalado">Producto1</p><br>
-                        <p class="precio_promocion" style="visibility: visible;"> 3</p>
-                        <p class="precio" style="text-decoration: line-through;"> 5</p><br>
-                        <a href="">
-                            <button id="buttonSalado">
-                                <img src="IMAGENES/whatsapp.png" alt="whatsapp logo" id="imgButton">
-                                Ordenar
-                            </button>
-                        </a> 
-                        <a href="">
-                            <button id="buttonSalado">
-                                <img src="IMAGENES/email.png" alt="Email" id="imgButton">
-                                Cotizar
-                            </button>
-                        </a>
-                    </div>
-
-                    <div class="producto">
-                        <img src="IMAGENES/platoSalado2 cuadrado.jpg" alt="Producto1">
-                        <p class="productoNombreSalado">Producto2</p><br>
-                        <p class="precio_promocion" style="visibility: visible;"> 5</p>
-                        <p class="precio" style="text-decoration: line-through;"> 7</p><br>
-                        <a href="">
-                            <button id="buttonSalado">
-                                <img src="IMAGENES/whatsapp.png" alt="whatsapp logo" id="imgButton">
-                                Ordenar
-                            </button>
-                        </a> 
-                        <a href="">
-                            <button id="buttonSalado">
-                                <img src="IMAGENES/email.png" alt="Email" id="imgButton">
-                                Cotizar
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <button class="sliderBtn right2">&#10095;</button>
+    <section class="producto">
+        <div class="galeria">
+            <div class="miniaturas">
+                <img src="IMAGENES/Chaomein/img1.jpg" alt="Vista lateral" onclick="cambiarImagen(this)">
+                <img src="IMAGENES/Chaomein/img2.jpg" alt="Vista diagonal" onclick="cambiarImagen(this)">
+                <img src="IMAGENES/Chaomein/img3.jpg" alt="Vista frontal" onclick="cambiarImagen(this)">
+                <img src="IMAGENES/Chaomein/img4.jpg" alt="Vista superior" onclick="cambiarImagen(this)">
             </div>
 
-        </section>        
+            <div class="imagen-principal">
+                <img id="imagenPrincipal" src="IMAGENES/Chaomein/img1.jpg" alt="Chaomein1">
+            </div>
+        </div>
+
+        <div class="detalles">
+            <h2>Chaomein clásico</h2>
+            <div class="precio">
+                <span class="regular" style="color: #777; text-decoration: line-through">$5</span>
+                <span class="promocion" style="color: #88a94b; visibility: visible;">$3</span>
+            </div>
+
+            
+
+            <div class="acciones">
+                <a href="https://wa.me/50373495217?text=Hola%20quiero%20ordenar%20el%20brownie%20clásico%20de%204%20Porciones." target="_blank" id="botonWhatsApp">
+                    <button class="button">
+                        <img src="IMAGENES/whatsapp.png" alt="whatsapp logo" id="imgButton">
+                        Ordenar
+                    </button>
+                </a>   
+                <a>     
+                    <button class="button">
+                        <img src="IMAGENES/email.png" alt="Email" id="imgButton">
+                        Cotizar
+                    </button>
+                </a>
+            </div>
+
+            <div class="descripcion">
+                <h3>Descripción</h3>
+                <p>
+                    Chaomein Super gurmet hecho con fideos marca penne, verduras frescas traidas directamente desde la tiendona y lavadas con jabon del super Axion. No se que mas escribir así que: sdosjadoijajs jiasjodi idjoaisasd  dusaoidahosdhsud aoisdoi asod aos doaishd a hdsuihaosdo j oahsoduhuhd uhasoduhasu hauh douhasd.
+                </p>
+            </div>
+        </div>
     </section>
 
     <script>
-    const slider2 = document.getElementById('slider2');
-        document.querySelector('.sliderBtn.left2').onclick = () => slider2.scrollBy({ left: -300, behavior: 'smooth' });
-        document.querySelector('.sliderBtn.right2').onclick = () => slider2.scrollBy({ left: 300, behavior: 'smooth' });
-
-        function enableDragScroll(container) {
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            container.addEventListener('mousedown', (e) => {
-                isDown = true;
-                container.classList.add('active');
-                startX = e.pageX - container.offsetLeft;
-                scrollLeft = container.scrollLeft;
-            });
-
-            container.addEventListener('mouseleave', () => {
-                isDown = false;
-                container.classList.remove('active');
-            });
-
-            container.addEventListener('mouseup', () => {
-                isDown = false;
-                container.classList.remove('active');
-            });
-
-            container.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - container.offsetLeft;
-                const walk = (x - startX) * 1.2; // Ajusta la velocidad del arrastre
-                container.scrollLeft = scrollLeft - walk;
-            });
-            }
-
-        
-        enableDragScroll(slider2);
+        //Cambiar imagen
+        function cambiarImagen(elemento) {
+            const imagenPrincipal = document.getElementById('imagenPrincipal');
+            imagenPrincipal.src = elemento.src;
+        }
     </script>
+
 </body>
 
-<footer style="background-color: #E0FAB1;"> <!--#fadde4-->
+<footer style="background-color: #E0FAB1; border-top: 2px solid #000;"> <!--#fadde4-->
     <section class="footerInfoSection">
 
         <div class="footerInfo1">
@@ -255,4 +152,3 @@
 </footer>
 
 </html>
-

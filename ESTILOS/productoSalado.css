@@ -8,7 +8,22 @@ html body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
     margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #E0FAB1;
+  border-top: 2px solid #000;
 }
 
 .navbar {
@@ -52,127 +67,21 @@ html body {
     color: #3d4d21;
 }
 
-.banner {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.banner-top img {
-    width: 100%;
-    height: auto;
-    border-top: 0px solid #000000;
-    border-bottom: 2px solid #000000;
-    margin-bottom: -4px;
-}
-
-.banner-bottom img {
-    width: 100%;
-    height: auto;
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-}
-
 body h1{
     text-align: center;
     font-family: "Henny Penny", system-ui;;
 }
 
-.MenuHeader{
-  text-align: center;
-  padding-top: 10px;
-  font-family: "Henny Penny", system-ui;
-}
-
-.producto{
-  border: 1px solid #000000;
-  border-radius: 8px;
-  padding: 8px 8px 15px 8px;
-  text-align: center;
-  background-color: #FFF;
-  transition: 0.3s;
-}
-
-.producto:hover{
-    transform: scale(1.10);
-    transition: 0.3;
-}
-
-.productoNombreSalado {
-    color: #9fc753;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: "Henny Penny", system-ui;
-}
-
 .precio {
     font-size: 18px;
     font-weight: bold;
-    text-decoration: none;
     color: #000;
 }
 
 .precio_promocion{
     font-size: 20px;
     font-weight: bold;
-    text-decoration: none;
     color: #000;
-}
-
-.producto img {
-    width: 90%;
-    border-radius: 8px;
-}
-
-.producto button:hover{
-    background-color: #974f61;
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-.producto #buttonSalado{
-    background-color: #9fc753;
-    color: #FFF;
-    font-size: 15px;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "Emilys Candy", serif;;
-    transition: 0.3s;
-    margin-bottom: 5px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    min-width: 120px;
-    width: 30%;
-    height: 40px;
-    vertical-align: middle;
-}
-
-.producto #buttonSalado:hover{
-    background-color: #708d3c;
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-#oliverDivProducto{
-  vertical-align: middle;
-  padding: 25px 0 0 0;
-  text-align: center;
-  background-color: #E0FAB1;
-  border: 0px solid #000;
-}
-
-#oliverImgProducto{
-  width: 100%;
-  vertical-align: middle;
-}
-
-#imgButton {
-  width: 18px;
-  height: auto;
-  border-radius: 0;
 }
 
 .footerInfoSection {
@@ -249,65 +158,161 @@ header {
   display: none;
 }
 
-.sliderProductos {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-  scroll-behavior: smooth;
-  padding: 40px 20px;
-  scroll-padding-left: 20px;
-}
+/*Código de chatgpt*/
 
+
+/* --- ESTRUCTURA GENERAL --- */
 .producto {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  width: 250px; /* ajusta según tu diseño */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 5%;
+    align-items: flex-start;
 }
 
-.sliderWrapper {
-  position: relative;
-  overflow: hidden;
+/* --- GALERÍA --- */
+.galeria {
+    flex: 1 1 45%;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
 }
 
-.sliderBtn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
+.miniaturas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
-
-.sliderBtn.left2 { left: 10px; background-color: #9fc753;}
-.sliderBtn.right2 { right: 10px; background-color: #9fc753;}
-
-.sliderProductos, 
-.sliderProductos * {
-  user-select: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+.miniaturas img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border 0.2s ease;
 }
 
-.sliderProductos {
-  cursor: grab;
-  cursor: -webkit-grab;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.miniaturas img:hover {
+    border: 2px solid #88a94b;
 }
 
-.sliderProductos::-webkit-scrollbar {
-  display: none;
+.imagen-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px; /* tamaño base en escritorio */
+    background-color: #fff; /* opcional, para que se vea el marco si la imagen es pequeña */
+    border-radius: 10px;
 }
 
-.sliderProductos.active {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
+.imagen-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+/* --- DETALLES DEL PRODUCTO --- */
+.detalles {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: "Emilys Candy", serif;
+}
+
+.detalles h2 {
+  font-family: "Henny Penny", system-ui;
+}
+
+.precio {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Emilys Candy", serif;
+}
+
+.opciones {
+    display: flex;
+    gap: 2rem;
+    font-size: 20px;
+}
+
+.opciones select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.acciones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button {
+    background-color: #9fc753;
+    color: #FFF;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Emilys Candy", serif;;
+    transition: 0.3s;
+    margin-bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#imgButton {
+  width: 18px;
+  height: auto;
+  border-radius: 0;
+}
+
+.button a{
+  display: inline-block;
+}
+
+.button:hover{
+    background-color: #708d3c;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* --- DESCRIPCIÓN --- */
+.descripcion h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.descripcion p {
+    line-height: 1.5;
+    color: #444;
+}
+
+/*Código de chatgpt*/
+
+@media (max-width: 1300px) {
+  .button {
+      font-size: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+  .button {
+      font-size: 15px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -359,45 +364,10 @@ header {
     left: 0;
   }
 
-  .banner img {
-    width: 100%;
-    height: auto;
+  footer {
+    position: static;
   }
-
-  .info {
-    width: 90%;
-    margin: 0 auto 20px auto;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 25px;
-  }
-
-  .info-left, .info-right {
-    flex: none;
-    width: 100%;
-  }
-
-  .info-right p {
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .producto {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .producto img {
-    width: 100%;
-    height: auto;
-  }
-
-  .productoNombre {
-    font-size: 16px;
-  }
-
+  
   .footerInfoSection {
     display: flex;
     text-align: center;
@@ -425,26 +395,66 @@ header {
   }
 
   .footerInfo3 svg {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-}
-
-  .MenuHeader{
-    text-align: center;
-    padding-top: 10px;
-    font-family: "Henny Penny", system-ui;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
   }
+
+  .producto {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .galeria {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .miniaturas {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .miniaturas img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .detalles {
+        width: 100%;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .imagen-principal {
+      width: 100%;
+      min-width: 400px;
+      max-width: 400px;
+    }
+
+    .imagen-principal img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .button {
+      font-size: 20px;
+      width: 100%;
+    }
 }
 
 
 @media (max-width: 600px) {
   h1 {
     font-size: 22px;
-  }
-
-  .ordenText a {
-    font-size: 18px;
   }
 
   .footerInfoSection {
