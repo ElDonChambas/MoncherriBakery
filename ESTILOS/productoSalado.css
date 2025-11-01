@@ -203,8 +203,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 350px; /* tamaño base en escritorio */
-    background-color: #fff; /* opcional, para que se vea el marco si la imagen es pequeña */
+    min-height: 350px; 
+    background-color: #fff;
     border-radius: 10px;
 }
 
@@ -435,8 +435,8 @@ header {
 
     .imagen-principal {
       width: 100%;
-      min-width: 400px;
-      max-width: 400px;
+      min-width: 350px;
+      max-width: 350px;
     }
 
     .imagen-principal img {
