@@ -17,15 +17,6 @@ body {
   flex-direction: column;
 }
 
-footer {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #E0FAB1;
-  border-top: 2px solid #000;
-  position: fixed;
-}
-
 .navbar {
     display: flex;
     flex-direction: column;
@@ -56,7 +47,7 @@ footer {
 
 .navlinks li a {
     text-decoration: none;
-    color: #88a94b;
+    color: #f77f7f;
     font-weight: bold;
     transition: 0.2s;
     font-family: "Emilys Candy", serif;
@@ -64,7 +55,7 @@ footer {
 }
 
 .navlinks li a:hover{
-    color: #3d4d21;
+    color: #dd4444;
 }
 
 body h1{
@@ -82,6 +73,15 @@ body h1{
     font-size: 20px;
     font-weight: bold;
     color: #000;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ebc6c6;
+  border-top: 2px solid #000;
+  position: fixed;
 }
 
 .footerInfoSection {
@@ -114,7 +114,7 @@ body h1{
 .footerInfo1 li,
 .footerInfo2 li,
 .footerInfo3 li{
-    color: #3d4d21;
+    color: #AA2B2C;
     font-size: 20px;
     margin-left: 0;
     transition: 0.3s;
@@ -124,7 +124,7 @@ body h1{
 .footerInfo1 li:hover,
 .footerInfo2 li:hover,
 .footerInfo3 li:hover{
-    color: #a1c068;
+    color: #d67b92;
     transition: 0.3s;
 }
 
@@ -149,7 +149,7 @@ header {
 .menu-icon {
   display: none;
   font-size: 28px;
-  color: #88a94b;
+  color: #f77f7f;
   cursor: pointer;
   user-select: none;
 }
@@ -192,7 +192,7 @@ header {
 }
 
 .miniaturas img:hover {
-    border: 2px solid #88a94b;
+    border: 2px solid #dd4444;
 }
 
 .imagen-principal {
@@ -253,7 +253,7 @@ header {
 }
 
 .button {
-    background-color: #9fc753;
+    background-color: #f77f7f;
     color: #FFF;
     font-size: 25px;
     padding: 5px;
@@ -281,7 +281,7 @@ header {
 }
 
 .button:hover{
-    background-color: #708d3c;
+    background-color: #dd4444;
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -327,7 +327,7 @@ header {
     left: -100%;
     width: 60%;
     height: 100vh;
-    background-color: #ebffc6;
+    background-color: #ebc6c6;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -355,12 +355,12 @@ header {
 
   .navlinks li a {
     font-size: 20px;
-    color: #88a94b;
+    color: #f77f7f;
     font-family: "Emilys Candy", serif;
   }
 
   .navlinks li a:hover {
-    color: #3d4d21;
+    color: #dd4444;
   }
 
   .menu-toogle:checked + .menu-icon + .navlinks {
@@ -453,6 +453,7 @@ header {
       width: 100%;
     }
 }
+
 
 @media (max-width: 600px) {
   h1 {

@@ -149,6 +149,7 @@ body h1{
 
 .producto a{
   display: inline-block;
+  text-decoration: none;
 }
 
 .producto button:hover{

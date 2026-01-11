@@ -11,13 +11,18 @@ html body {
     margin: 0 auto;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   background-color: #E0FAB1;
   border-top: 2px solid #000;
+  position: fixed;
 }
 
 .navbar {
@@ -78,8 +83,6 @@ body h1{
     color: #000;
 }
 
-
-
 .footerInfoSection {
     width: 100%;
     max-width: 1000px;
@@ -87,7 +90,7 @@ body h1{
     justify-content: center;
     align-items: flex-start;
     gap: 80px;
-    margin: -4px auto;
+    margin: -4px auto 0px;
     padding: 30px 20px 10px 20px;
     box-sizing: border-box;
 }
@@ -153,8 +156,6 @@ header {
 .menu-toogle {
   display: none;
 }
-
-/*Código de chatgpt*/
 
 
 /* --- ESTRUCTURA GENERAL --- */
@@ -297,7 +298,13 @@ header {
     color: #444;
 }
 
-/*Código de chatgpt*/
+@media (max-width: 1980px) {
+  footer {
+    position: static;
+    margin-bottom: -50px;
+    padding-bottom: -50px;
+  }
+}
 
 @media (max-width: 1300px) {
   .button {
@@ -316,6 +323,7 @@ header {
   footer {
     position: static;
   }
+  
   /* Navbar */
   .navlinks {
     position: fixed;
